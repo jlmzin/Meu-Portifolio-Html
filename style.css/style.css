@@ -1,0 +1,302 @@
+/* ==========================================================
+   Fontes
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+/* ==========================================================
+   Variáveis de cor / tokens
+   ========================================================== */
+:root {
+    --cor-fundo: #f2f1ec;
+    --cor-texto: #22262b;
+    --cor-header: #12202b;
+    --cor-header-texto: #f2f1ec;
+    --cor-destaque: #c9932f;
+    --cor-destaque-escuro: #a3771f;
+    --cor-borda: #d7d4c8;
+    --fonte-titulo: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --fonte-texto: 'Inter', 'Segoe UI', sans-serif;
+    --fonte-mono: 'IBM Plex Mono', monospace;
+}
+
+/* ==========================================================
+   Reset básico
+   ========================================================== */
+* {
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   Body
+   ========================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   Header
+   ========================================================== */
+header {
+    background-color: var(--cor-header);
+    color: var(--cor-header-texto);
+    padding: 48px 24px 40px;
+    text-align: center;
+    border-bottom: 4px solid var(--cor-destaque);
+}
+
+header h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    margin: 16px 0 4px;
+    letter-spacing: 0.5px;
+}
+
+header .cargo {
+    color: var(--cor-destaque);
+    font-family: var(--fonte-mono);
+    font-size: 0.95rem;
+    margin: 0 0 20px;
+}
+
+/* Imagem de perfil */
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--cor-destaque);
+    padding: 4px;
+}
+
+header address {
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+header address p {
+    margin: 0;
+}
+
+header a {
+    color: var(--cor-header-texto);
+    border-bottom: 1px solid var(--cor-destaque);
+    padding-bottom: 1px;
+}
+
+header a:hover {
+    color: var(--cor-destaque);
+}
+
+/* ==========================================================
+   Navegação
+   ========================================================== */
+nav {
+    background-color: #1b2e3d;
+    padding: 14px 24px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav h2 {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--cor-header-texto);
+    font-family: var(--fonte-mono);
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque);
+    border-bottom-color: var(--cor-destaque);
+}
+
+/* ==========================================================
+   Conteúdo principal / Seções
+   ========================================================== */
+main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 8px 24px 20px;
+}
+
+section {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* ==========================================================
+   Títulos
+   ========================================================== */
+h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
+    color: var(--cor-header);
+    margin-top: 0;
+    margin-bottom: 18px;
+    position: relative;
+    padding-left: 16px;
+    border-left: 4px solid var(--cor-destaque);
+}
+
+/* ==========================================================
+   Parágrafos
+   ========================================================== */
+section p {
+    margin: 0 0 14px;
+    max-width: 68ch;
+}
+
+/* ==========================================================
+   Listas (ol e dl)
+   ========================================================== */
+#formacao ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+#formacao li {
+    margin-bottom: 10px;
+}
+
+#projetos dl dt {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-header);
+    margin-bottom: 4px;
+}
+
+#projetos dl dd {
+    margin: 0 0 16px;
+    color: #444;
+}
+
+/* ==========================================================
+   Tabela de habilidades
+   ========================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+thead tr {
+    background-color: var(--cor-header);
+}
+
+th {
+    color: var(--cor-header-texto);
+    text-align: left;
+    padding: 12px 14px;
+    font-family: var(--fonte-mono);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--cor-borda);
+    border-right: 1px solid var(--cor-borda);
+}
+
+td:last-child {
+    border-right: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e9e7dd;
+}
+
+/* ==========================================================
+   Links (geral, dentro do conteúdo)
+   ========================================================== */
+a {
+    color: var(--cor-destaque-escuro);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+footer {
+    background-color: var(--cor-header);
+    color: var(--cor-header-texto);
+    text-align: center;
+    padding: 20px;
+    font-family: var(--fonte-mono);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================
+   Responsivo
+   ========================================================== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        gap: 16px;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid var(--cor-borda);
+        padding: 8px 14px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-family: var(--fonte-mono);
+        font-weight: 600;
+        display: block;
+        font-size: 0.75rem;
+        color: var(--cor-destaque-escuro);
+        margin-bottom: 2px;
+    }
+}
